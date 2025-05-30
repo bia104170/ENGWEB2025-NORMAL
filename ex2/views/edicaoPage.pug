@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    .w3-card-4 
+        header.w3-container.w3-blue-gray  
+            a(href='/' class="w3-button w3-light-grey w3-round w3-margin-top w3-margin-bottom" style="width:100px") Voltar          
+            .w3-margin-left
+            h1 Detalhes da Edição #{edicao._id}
+            p Ano: #{edicao.anoEdicao}
+            p País Organizador: #{edicao.organizacao}
+            p País Vencedor: #{edicao.vencedor}
+
+        h2 Lista de Músicas
+        table.w3-table-all
+            thead
+                tr
+                    th Nome da Música
+                    th Intérprete
+                    th País Representado
+            tbody
+                each musica in edicao.musicas
+                    tr
+                        td #{musica.titulo}
+                        td #{musica.interprete}
+                        td #{musica.pais}
