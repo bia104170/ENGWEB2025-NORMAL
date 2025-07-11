@@ -2,7 +2,7 @@ var Edicao = require('../models/edicao');
 
 
 module.exports.getAllEdicoes = () => {
-    return Edicao.find({}, { anoEdicao: 1, organizacao: 1, vencedor: 1, _id: 1 }).exec()
+    return Edicao.find({}, { anoEdicao: 1, organizacao: 1, vencedor: 1, _id: 1, musicas: 1 }).exec()
 }
 
 

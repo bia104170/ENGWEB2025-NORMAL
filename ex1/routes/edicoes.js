@@ -38,6 +38,7 @@ router.get('/edicoes/:id', function(req, res) {
       res.status(400).json({ error: "Query 'papel' inválida ou ausente" });
     }
   });
+
   
   // GET /interpretes
   router.get('/interpretes', function(req, res) {
